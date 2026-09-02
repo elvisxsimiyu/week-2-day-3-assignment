@@ -31,6 +31,13 @@ body{
     font-size: 50px;
 }
 
+.form{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .text_label{
     font-size: 20px;
     margin-bottom:15px;
@@ -40,11 +47,20 @@ body{
     width: 400px;
     padding: 14px 16px;
     height:200px;
-    font-size:25px;
+    font-size:18px;
     margin-bottom:20px;
-    border:none;
+    outline:none;
+    border:2px solid black;
     font-family: inherit;
     
+}
+
+.textbox.textbox-almost{
+    border:2px solid orange;
+}
+
+.textbox.textbox-over{
+    border:2px solid red;
 }
 
 .characters{
@@ -56,6 +72,14 @@ body{
     color: #ffffff;
     font-family: inherit;
 
+}
+
+.characters-typed.characters-typed-almost{
+    color: orange;
+}
+
+.characters-typed.characters-typed-over{
+    color:red;
 }
 
 .submit-btn{
@@ -72,13 +96,19 @@ body{
     transition:background-color 0.3s ease;
 }
 
-.submit-btn:hover{
+.submit-btn:not(:disabled):hover{
     background-color:#000000;
     color:#ffffff;
 
 }
 
-.submit-btn:active{
+.submit-btn:not(:disabled):active{
     transform:translateY(5px);
     box-shadow: 0 0 0 #000000;
+}
+
+.submit-btn:disabled{
+    cursor:not-allowed;
+    transform: none;
+    box-shadow: 0 4px 0 #000000;
 }
