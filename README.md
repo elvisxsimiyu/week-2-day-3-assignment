@@ -1,7 +1,7 @@
 # week-2-day-3-assignment
 this is are exercises targeting DOM Manipulation
 
-## — Task 1: Character Counter
+## Task 1: Character Counter
 
 A dynamic character counter built using HTML, CSS, and JavaScript DOM manipulation.
 
